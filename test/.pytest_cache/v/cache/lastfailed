@@ -1,0 +1,4 @@
+{
+  "test_invoice_stats.py": true,
+  "test_invoice_stats.py::test_abc": true
+}
