@@ -48,15 +48,12 @@ def example_invoice_stats_sorted(example_invoices):
     return ivs
 
 
-# @pytest.mark.parametrize('arg', ['example_invoice_stats_sorted', 'example_invoice_stats_al', 'example_invoice_stats_list'], indirect=True)
-@pytest.mark.parametrize('arg', ['example_invoice_stats_al'], indirect=True)
+@pytest.mark.parametrize('arg',
+                         ['example_invoice_stats_sorted', 'example_invoice_stats_deque', 'example_invoice_stats_al',
+                          'example_invoice_stats_list'], indirect=True)
 def test_invoice_stats_array_list(arg):
     number = 100
-    print("=========== " + str(arg))
-    print("Memory Size = " + str(get_size(arg)))
-    print("using partition = " + str(arg.get_median()))
     print("time = " + str(timeit.timeit(arg.get_median, number=number)))
-    print("numpy  = " + str(arg.get_median_np()))
     print("time = " + str(timeit.timeit(arg.get_median_np, number=number)))
 
 
@@ -70,21 +67,29 @@ def test_sorted2(example_invoice_stats_sorted):
 
 
 def test_add_invoice(example_invoice_stats_list):
-    pass
+    ivs = InvoiceStats([])
+    ivs.add_invoices([10216512.12, 23424.43, 12312938213.43])
+    assert ivs._n == 3
 
 
 def test_add_invoices():
-    pass
+    ivs = InvoiceStats([])
+    ivs.add_invoice(10216512.12)
+    assert ivs._n == 1
 
 
-def test_clear():
-    pass
+def test_clear(example_invoice_stats_list):
+    example_invoice_stats_list.clear()
+    assert example_invoice_stats_list._n == 0
+    assert example_invoice_stats_list._total == 0
+    assert example_invoice_stats_list._mean == 0
 
 
-def test_median():
-    pass
+def test_median(example_invoice_stats_list):
+    print(example_invoice_stats_list.get_median(), example_invoice_stats_list.get_median_np())
+    assert example_invoice_stats_list.get_median() == example_invoice_stats_list.get_median_np()
 
 
 def test_mean(example_invoice_stats_list):
-    print("mean_np = " + str(example_invoice_stats_list.get_mean_np()))
-    print("mean = " + str(example_invoice_stats_list.get_mean()))
+    v = abs(example_invoice_stats_list.get_mean() - example_invoice_stats_list.get_mean_np())
+    assert (v < 1e-3)

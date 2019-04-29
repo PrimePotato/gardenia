@@ -11,9 +11,9 @@ class InvalidInvoiceException(BaseException):
 class InvoiceStats(object):
     def __init__(self, data_container):
         self._invoices = data_container
-        self.total = 0
-        self.n = 0
-        self.mean = 0
+        self._total = 0
+        self._n = 0
+        self._mean = 0
 
     @staticmethod
     def convert_validate_invoice_to_int(v):
@@ -27,12 +27,15 @@ class InvoiceStats(object):
 
     def add_invoice(self, invoice):
         v = InvoiceStats.convert_validate_invoice_to_int(invoice)
-        self.n += 1
+        self._n += 1
         self._invoices.append(v)
-        self.total += v
-        self.mean = self.mean * ((self.n - 1)/self.n) + (v / self.n)
+        self._total += v
+        self._mean = self._mean * ((self._n - 1) / self._n) + (v / self._n)
 
     def clear(self):
+        self._n = 0
+        self._total = 0
+        self._mean = 0
         self._invoices.clear()
 
     def get_median_np(self):
@@ -44,13 +47,13 @@ class InvoiceStats(object):
         f = math.floor(m)
         ary = np.array(self._invoices)
         ary.partition((c, f))
-        return (ary[c] + ary[f]) / 2
+        return (ary[c] + ary[f]) / 200
 
     def get_mean_np(self):
         return np.mean(self._invoices) / 100
 
     def get_mean(self):
-        return self.mean / 100
+        return self._mean / 100
 
 
 class InvoiceStatsSorted(InvoiceStats):
@@ -59,10 +62,10 @@ class InvoiceStatsSorted(InvoiceStats):
 
     def add_invoice(self, invoice):
         v = InvoiceStats.convert_validate_invoice_to_int(invoice)
-        self.n += 1
+        self._n += 1
         self._invoices.add(v)
-        self.total += v
-        self.mean = self.mean * ((self.n - 1)/self.n) + (v / self.n)
+        self._total += v
+        self.mean = self.mean * ((self._n - 1) / self._n) + (v / self._n)
 
     def get_median(self):
         m = (len(self._invoices) - 1) / 2
