@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41d4e375-2f88-470f-9965-00f87a95c1a2" name="Default" comment="" />
+    <list default="true" id="41d4e375-2f88-470f-9965-00f87a95c1a2" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/invoice_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/invoice_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/.pytest_cache/v/cache/lastfailed" beforeDir="false" afterPath="$PROJECT_DIR$/test/.pytest_cache/v/cache/lastfailed" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_invoice_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_invoice_stats.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,8 +18,9 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/gardenia$py_test_for_test_invoice_stats_test_abc.coverage" NAME="py.test for test_invoice_stats.test_abc Coverage Results" MODIFIED="1556470281439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/gardenia$py_test_in_test_invoice_stats_py.coverage" NAME="py.test in test_invoice_stats.py Coverage Results" MODIFIED="1556469433206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/gardenia$py_test_for_test_invoice_stats_test_invoice_stats4.coverage" NAME="py.test for test_invoice_stats.test_invoice_stats4 Coverage Results" MODIFIED="1556480653238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
     <SUITE FILE_PATH="coverage/gardenia$py_test_for_test_invoice_stats_test_invoice_stats.coverage" NAME="py.test for test_invoice_stats.test_invoice_stats Coverage Results" MODIFIED="1556470509819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
-    <SUITE FILE_PATH="coverage/gardenia$py_test_for_test_invoice_stats_test_invoice_stats2.coverage" NAME="py.test for test_invoice_stats.test_invoice_stats2 Coverage Results" MODIFIED="1556472018687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/gardenia$py_test_for_test_invoice_stats_test_invoice_stats2.coverage" NAME="py.test for test_invoice_stats.test_invoice_stats2 Coverage Results" MODIFIED="1556485667574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
   </component>
   <component name="FileEditorManager">
     <leaf>
@@ -22,11 +29,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="test_invoice_stats.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_invoice_stats.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/test_invoice_stats.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+            <state relative-caret-position="188">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -34,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="invoice_stats.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="invoice_stats.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/invoice_stats.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="32" column="20" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="20" />
+            <state relative-caret-position="472">
+              <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -69,13 +76,16 @@
       <find>.to_array()</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/InvoiceStats.py" />
         <option value="$PROJECT_DIR$/test/testInvoiceStats.py" />
-        <option value="$PROJECT_DIR$/src/invoice_stats.py" />
         <option value="$PROJECT_DIR$/test/test_invoice_stats.py" />
+        <option value="$PROJECT_DIR$/src/invoice_stats.py" />
       </list>
     </option>
   </component>
@@ -88,11 +98,13 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -197,6 +209,21 @@
       <option name="_new_target" value="&quot;test_invoice_stats.test_invoice_stats2&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
     </configuration>
+    <configuration name="py.test for test_invoice_stats.test_invoice_stats4" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="gardenia" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_invoice_stats.test_invoice_stats4&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+    </configuration>
     <configuration name="py.test in test_invoice_stats.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="gardenia" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -217,10 +244,12 @@
       <item itemvalue="Python tests.py.test in test_invoice_stats.py" />
       <item itemvalue="Python tests.py.test for test_invoice_stats.test_abc" />
       <item itemvalue="Python tests.py.test for test_invoice_stats.test_invoice_stats2" />
+      <item itemvalue="Python tests.py.test for test_invoice_stats.test_invoice_stats4" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.py.test for test_invoice_stats.test_invoice_stats2" />
+        <item itemvalue="Python tests.py.test for test_invoice_stats.test_invoice_stats4" />
         <item itemvalue="Python tests.py.test for test_invoice_stats.test_invoice_stats" />
         <item itemvalue="Python tests.py.test for test_invoice_stats.test_abc" />
         <item itemvalue="Python tests.py.test in test_invoice_stats.py" />
@@ -241,54 +270,54 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats - 2019.04.28 at 17h 55m 02s.xml">
-      <configuration name="py.test for test_invoice_stats.test_invoice_stats" configurationId="tests" />
+    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats4 - 2019.04.28 at 20h 40m 24s.xml">
+      <configuration name="py.test for test_invoice_stats.test_invoice_stats4" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats - 2019.04.28 at 17h 55m 13s.xml">
-      <configuration name="py.test for test_invoice_stats.test_invoice_stats" configurationId="tests" />
+    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats4 - 2019.04.28 at 20h 41m 26s.xml">
+      <configuration name="py.test for test_invoice_stats.test_invoice_stats4" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 18h 07m 36s.xml">
+    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats4 - 2019.04.28 at 20h 44m 21s.xml">
+      <configuration name="py.test for test_invoice_stats.test_invoice_stats4" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 20h 44m 45s.xml">
       <configuration name="py.test for test_invoice_stats.test_invoice_stats2" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 18h 08m 08s.xml">
+    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 20h 46m 14s.xml">
       <configuration name="py.test for test_invoice_stats.test_invoice_stats2" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 18h 08m 22s.xml">
+    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 21h 48m 08s.xml">
       <configuration name="py.test for test_invoice_stats.test_invoice_stats2" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 18h 08m 56s.xml">
+    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 21h 48m 18s.xml">
       <configuration name="py.test for test_invoice_stats.test_invoice_stats2" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 18h 18m 49s.xml">
+    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 21h 48m 28s.xml">
       <configuration name="py.test for test_invoice_stats.test_invoice_stats2" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 18h 19m 50s.xml">
+    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 21h 51m 33s.xml">
       <configuration name="py.test for test_invoice_stats.test_invoice_stats2" configurationId="tests" />
     </history-entry>
-    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 18h 19m 53s.xml">
-      <configuration name="py.test for test_invoice_stats.test_invoice_stats2" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 18h 20m 35s.xml">
+    <history-entry file="py_test_for_test_invoice_stats_test_invoice_stats2 - 2019.04.28 at 22h 07m 05s.xml">
       <configuration name="py.test for test_invoice_stats.test_invoice_stats2" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33223322" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33115467" />
+      <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" weight="0.32897604" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1892779" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32570806" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.09221748" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="SciView" weight="0.32995737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39933994" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39869282" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -300,21 +329,21 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.09221748" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="0" />
+      <window_info anchor="right" id="SciView" order="0" weight="0.32995737" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="8" />
-      <window_info anchor="bottom" id="Python Console" order="3" />
+      <window_info active="true" anchor="bottom" id="Run" order="8" visible="true" weight="0.33115467" />
+      <window_info anchor="bottom" id="Python Console" order="3" weight="0.32897604" />
       <window_info anchor="bottom" id="Message" order="6" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.39869282" />
       <window_info anchor="right" id="Database" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="4" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32570806" />
       <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
@@ -330,7 +359,14 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="23" />
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/invoice_stats.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="27" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -406,20 +442,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/invoice_stats.py">
+    <entry file="file://$PROJECT_DIR$/test/test_invoice_stats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="20" />
+        <state relative-caret-position="188">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_invoice_stats.py">
+    <entry file="file://$PROJECT_DIR$/src/invoice_stats.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+        <state relative-caret-position="472">
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
