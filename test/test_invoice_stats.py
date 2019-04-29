@@ -1,12 +1,10 @@
-import numpy as np
 import timeit
+from collections import deque
 
+import numpy as np
 import pytest
 
 from src.invoice_stats import InvoiceStats, ArrayList, InvoiceStatsSorted
-from utils.utils import get_size
-
-from collections import deque
 
 
 @pytest.fixture
@@ -51,10 +49,17 @@ def example_invoice_stats_sorted(example_invoices):
 @pytest.mark.parametrize('arg',
                          ['example_invoice_stats_sorted', 'example_invoice_stats_deque', 'example_invoice_stats_al',
                           'example_invoice_stats_list'], indirect=True)
-def test_invoice_stats_array_list(arg):
+def test_invoice_stats_median(arg):
     number = 100
-    print("time = " + str(timeit.timeit(arg.get_median, number=number)))
-    print("time = " + str(timeit.timeit(arg.get_median_np, number=number)))
+    print(arg.__class__.__name__ + "time = " + str(timeit.timeit(arg.get_median, number=number)))
+
+
+@pytest.mark.parametrize('arg',
+                         ['example_invoice_stats_sorted', 'example_invoice_stats_deque', 'example_invoice_stats_al',
+                          'example_invoice_stats_list'], indirect=True)
+def test_invoice_stats_mean(arg):
+    number = 100
+    print(arg.__class__.__name__ + " time  = " + str(timeit.timeit(arg.get_mean, number=number)))
 
 
 def test_sorted(example_invoice_stats_sorted):

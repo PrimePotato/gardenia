@@ -9,6 +9,7 @@ class InvalidInvoiceException(BaseException):
 
 
 class InvoiceStats(object):
+    # Designed to work with different unsorted data containers
     def __init__(self, data_container):
         self._invoices = data_container
         self._total = 0
@@ -57,6 +58,7 @@ class InvoiceStats(object):
 
 
 class InvoiceStatsSorted(InvoiceStats):
+    # Using a sorted container, which speeds up the median calc but slows insertion
     def __init__(self):
         super().__init__(SortedList())
 
@@ -65,7 +67,7 @@ class InvoiceStatsSorted(InvoiceStats):
         self._n += 1
         self._invoices.add(v)
         self._total += v
-        self.mean = self.mean * ((self._n - 1) / self._n) + (v / self._n)
+        self._mean = self._mean * ((self._n - 1) / self._n) + (v / self._n)
 
     def get_median(self):
         m = (len(self._invoices) - 1) / 2

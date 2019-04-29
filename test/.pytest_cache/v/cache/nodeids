@@ -1,3 +1,17 @@
 [
-  "test_invoice_stats.py::test_add_invoice"
+  "test_invoice_stats.py::test_invoice_stats_median[example_invoice_stats_sorted]",
+  "test_invoice_stats.py::test_invoice_stats_median[example_invoice_stats_deque]",
+  "test_invoice_stats.py::test_invoice_stats_median[example_invoice_stats_al]",
+  "test_invoice_stats.py::test_invoice_stats_median[example_invoice_stats_list]",
+  "test_invoice_stats.py::test_invoice_stats_mean[example_invoice_stats_sorted]",
+  "test_invoice_stats.py::test_invoice_stats_mean[example_invoice_stats_deque]",
+  "test_invoice_stats.py::test_invoice_stats_mean[example_invoice_stats_al]",
+  "test_invoice_stats.py::test_invoice_stats_mean[example_invoice_stats_list]",
+  "test_invoice_stats.py::test_sorted",
+  "test_invoice_stats.py::test_sorted2",
+  "test_invoice_stats.py::test_add_invoice",
+  "test_invoice_stats.py::test_add_invoices",
+  "test_invoice_stats.py::test_clear",
+  "test_invoice_stats.py::test_median",
+  "test_invoice_stats.py::test_mean"
 ]

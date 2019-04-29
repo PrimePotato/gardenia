@@ -1,5 +1,4 @@
 {
-  "test_invoice_stats.py": true,
   "test_invoice_stats.py::test_abc": true,
   "test_invoice_stats.py::test_invoice_stats3": true,
   "test_invoice_stats.py::test_invoice_stats_array_list": true
