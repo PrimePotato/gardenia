@@ -1,14 +1,19 @@
 import numpy as np
 import math
 
+from sortedcontainers import SortedList
+
 
 class InvalidInvoiceException(BaseException):
     pass
 
 
 class InvoiceStats(object):
-    def __init__(self):
-        self._invoices = ArrayList()
+    def __init__(self, data_container):
+        self._invoices = data_container
+        self.total = 0
+        self.n = 0
+        self.mean = 0
 
     @staticmethod
     def convert_validate_invoice_to_int(v):
@@ -18,17 +23,20 @@ class InvoiceStats(object):
 
     def add_invoices(self, invoices):
         for v in invoices:
-            self._invoices.append(InvoiceStats.convert_validate_invoice_to_int(v))
-        # inv)
+            self.add_invoice(v)
 
     def add_invoice(self, invoice):
-        self._invoices.append(invoice)
+        v = InvoiceStats.convert_validate_invoice_to_int(invoice)
+        self.n += 1
+        self._invoices.append(v)
+        self.total += v
+        self.mean = self.mean * ((self.n - 1)/self.n) + (v / self.n)
 
     def clear(self):
         self._invoices.clear()
 
     def get_median_np(self):
-        return np.median(self._invoices)
+        return np.median(self._invoices) / 100
 
     def get_median(self):
         m = (len(self._invoices) - 1) / 2
@@ -38,37 +46,30 @@ class InvoiceStats(object):
         ary.partition((c, f))
         return (ary[c] + ary[f]) / 2
 
+    def get_mean_np(self):
+        return np.mean(self._invoices) / 100
+
     def get_mean(self):
-        return np.mean(self._invoices)
+        return self.mean / 100
 
 
-# class InvoiceStatsAl(object):
-#     def __init__(self):
-#         self._invoices = ArrayList()
-#
-#     def add_invoices(self, invoices):
-#         self._invoices.append(invoices)
-#
-#     def add_invoice(self, invoice):
-#         self._invoices.append(invoice)
-#
-#     def clear(self):
-#         self._invoices.clear()
-#
-#     def get_median_np(self):
-#         return np.median(self._invoices.to_array()) / 100
-#
-#     def get_median(self):
-#         m = (len(self._invoices)) / 2
-#         c = math.ceil(m) - 1
-#         f = math.floor(m) - 1
-#         ary = self._invoices.to_array()
-#         ary.partition([c, f])
-#         return (ary[c] + ary[f]) / 200
-#
-#     def get_mean(self):
-#         return np.mean(self._invoices) / 100
-#
+class InvoiceStatsSorted(InvoiceStats):
+    def __init__(self):
+        super().__init__(SortedList())
+
+    def add_invoice(self, invoice):
+        v = InvoiceStats.convert_validate_invoice_to_int(invoice)
+        self.n += 1
+        self._invoices.add(v)
+        self.total += v
+        self.mean = self.mean * ((self.n - 1)/self.n) + (v / self.n)
+
+    def get_median(self):
+        m = (len(self._invoices) - 1) / 2
+        c = math.ceil(m)
+        f = math.floor(m)
+        return (self._invoices[c] + self._invoices[f]) / 200
+
 
 class ArrayList(object):
     def __init__(self):
@@ -86,7 +87,7 @@ class ArrayList(object):
         self._base[self.idx] = x
         self.idx += 1
 
-    def to_array(self):
+    def __array__(self):
         return self._base[0:self.idx]
 
     def __iter__(self):
